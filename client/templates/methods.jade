@@ -1,0 +1,20 @@
+template(name="methods")
+  .container-fluid
+    .row
+      .col-md-12
+        h1 Methods
+          a(href="/", title="Odatacare Home")
+            span.home-icon.pull-left
+
+    .row
+      .col-md-4
+
+      .col-md-4
+        h4 Tools we like
+          each tools
+            .methods-section.raised
+              a(href = link, target="_blank")
+                h5 #{name}
+                .methods-section-text #{text}
+
+      .col-md-4

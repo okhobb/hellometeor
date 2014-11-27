@@ -1,0 +1,18 @@
+template(name="home")
+  .container-fluid
+    .row
+      .col-md-12
+        .jumbotron.home-header
+          .h1 Odatacare (beta)
+          .small The most remote and depraved health data and research sharing site in the world
+
+    .row
+      .col-md-4
+        a(href="/datasets")
+          +dataHome
+      .col-md-4
+        a(href="/methods")
+          +methodHome
+      .col-md-4
+        a(href="/publish")
+          +publishHome

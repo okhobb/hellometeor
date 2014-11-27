@@ -1,0 +1,15 @@
+template(name="addDatasetForm")
+  form(role="form")
+    .form-group
+      label(for="addDatasetName") Dataset Name
+        span
+          button.btn.btn-xs.btn-link.clear-form-btn (Clear form)
+      input.form-control(type="text" id="addDatasetName" placeholder="What do we call this dataset?")
+    .form-group
+      label(for="addDatasetLink") Link
+      input.form-control(type="text" id="addDatasetLink" placeholder="Where do we find it?")
+    .form-group
+      label(for="addDatasetDescription") Description
+      textarea.form-control(id="addDatasetDescription" placeholder="What's in this dataset? How should we look at it?")
+    button.btn.btn-default.raised(id="add-dataset-btn" type="submit") Add
+    span(id="addDatasetFormStatus")

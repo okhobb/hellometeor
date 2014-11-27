@@ -1,0 +1,36 @@
+template(name="datasets")
+  .container-fluid
+    .row
+      .col-md-12
+        h1 Datasets
+          a(href="/", title="Odatacare Home")
+            span.home-icon.pull-left
+
+    .row
+      .col-md-4
+
+        h4 Search
+        +searchDatasetForm
+
+        hr
+
+        h4 Contribute
+        .contribute-section-text Odatacare wants you to suggest the data that we can use together to model the future of health care.
+        +addDatasetForm
+
+      .col-md-8
+        table.table.table-striped.table-hover.datasets-table
+          thead
+            tr
+              th Name
+              th Description
+              th
+          tbody
+            each matchedDatasets
+              tr
+                td #{name}
+                  a.btn.btn-default.btn-xs(type="button", title="link", target="_blank", href = link)
+                    span.glyphicon.glyphicon-link(aria-hidden="true")
+                td #{description}
+                td
+                  button.btn.btn-xs.btn-default.raised.remove-dataset(data-id = _id) Remove
